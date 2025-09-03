@@ -7,8 +7,8 @@ function Home() {
     const [post, setPost] = useState([]);
     const [activeTab, setActiveTab] = useState("my");
     const authstatus = useSelector((state)=> state.auth.authstatus);
-
-    useEffect(() => {
+    
+        useEffect(() => {
         if (getPost.length > 0 && userData) {
             setPost(getPost.filter((p) => p.userId === userData.$id));
         }
@@ -23,7 +23,7 @@ function Home() {
         setActiveTab("other");
         setPost(getPost.filter((post) => post.userId !== userData.$id));
     }
-    {
+    
     return authstatus? (
     <div className="w-full">
   <div className="flex justify-center my-25">
@@ -68,8 +68,11 @@ function Home() {
   </div>
 </div>
     )
-    : <div>Login First</div>
+    : (<div className="w-full h-screen flex justify-center items-center">
+      <h1 className="text-2xl font-semibold text-gray-600 dark:text-gray-300">
+        Please Login
+      </h1>
+    </div>)
     }
-}
 
 export default Home

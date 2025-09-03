@@ -40,7 +40,7 @@ class Authentication {
         return await this.account.get();    
         } catch (error) {
             console.log("Appwrite::geting User : Error"+error);
-            
+            return null
         }
         
     }
