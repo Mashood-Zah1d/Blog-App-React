@@ -28,7 +28,7 @@ function Header() {
           BlogSphere
         </h1>
 
-        <ul className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-6 mt-4 md:mt-0">
+        <ul className="flex flex-row space-x-4">
           {navItems.map((item) =>
             item.active ? (
               <li key={item.name}>

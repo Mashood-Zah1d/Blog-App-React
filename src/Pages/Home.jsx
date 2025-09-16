@@ -26,7 +26,7 @@ function Home() {
     
     return authstatus? (
     <div className="w-full">
-  <div className="flex justify-center my-25">
+  <div className="flex justify-center my-25 pt-16">
     <div className="bg-gray-200 dark:bg-gray-700 rounded-full p-1 flex space-x-2">
       <button
         onClick={myPost}
