@@ -28,7 +28,7 @@ function Header() {
           BlogSphere
         </h1>
 
-        <ul className="flex flex-row space-x-4">
+        <ul className="flex flex-wrap md:flex-nowrap items-center space-x-4">
           {navItems.map((item) =>
             item.active ? (
               <li key={item.name}>
