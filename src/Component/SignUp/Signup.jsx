@@ -34,6 +34,7 @@ function Signup() {
     return (
         <div className="max-w-md mx-auto my-25 bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
             <h1 className="text-3xl font-bold text-center text-gray-800 mb-8">Sign-Up Form</h1>
+            <h3>{error}</h3>
             <form onSubmit={handleSubmit(Create)}>
                 <Input
                     label="Name: "

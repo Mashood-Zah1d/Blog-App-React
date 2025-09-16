@@ -32,6 +32,7 @@ class Authentication {
           return  await this.account.createEmailPasswordSession(email,password)
         } catch (error) {
             console.log("APPWRITE:: ERROR : " +error)
+            return error
         }
     }
 

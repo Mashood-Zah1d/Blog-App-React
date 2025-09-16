@@ -50,7 +50,7 @@ function Rte({
         onEditorChange={onChange}
         />
     )}
-    />
+    /> 
     </>
   )
 }

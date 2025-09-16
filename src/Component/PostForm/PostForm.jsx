@@ -27,12 +27,14 @@ function PostForm({ post }) {
             if (post) {
                 const file =  data.image[0] ? await service.uploadPhoto(data.image[0]) : null;
  
-
-                const dbpost = await service.updatePost(post.$id, { ...data, featuredImage: file ? file.$id : undefined, userId: userData.$id })
+                console.log(data.slug);
+                console.log(post.$id);
+                
+                const dbpost = await service.updatePost(post.$id, { ...data,$id : data.slug, featuredImage: file ? file.$id : undefined, userId: userData.$id })
 
                 if (dbpost) {
-                    dispatch(editPost({ slug: data.slug, updatedData: dbpost }))
-                    navigate(`/post/${dbpost.$id}`)
+                    dispatch(editPost({ updatedData: dbpost , slug : post.$id}))
+                    navigate(`/post/${post.$id}`)
                 }
             }
 

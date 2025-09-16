@@ -23,9 +23,9 @@ function Header() {
 
         <h1
           onClick={() => navigate("/")}
-          className="text-2xl font-extrabold tracking-tight bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500 bg-clip-text text-transparent cursor-pointer"
+          className="text-2xl text-black  cursor-pointer"
         >
-          Cartinix
+          BlogSphere
         </h1>
 
         <ul className="flex space-x-6">
@@ -37,8 +37,8 @@ function Header() {
                   className={({ isActive }) =>
 
 
-                    `relative text-sm font-medium 
-                   dark:text-white
+                  `relative text-sm font-medium 
+                 dark:text-white
                   after:content-[''] after:absolute after:left-0 after:-bottom-1
                  after:h-[2px] after:bg-gradient-to-r from-indigo-400 via-purple-500 to-pink-500
                  after:w-0 after:transition-all after:duration-300 

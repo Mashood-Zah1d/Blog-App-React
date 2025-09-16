@@ -26,7 +26,7 @@ const postService = createSlice({
     editPost: (state, action) => {
       const slug = action.payload.slug;
       const updatedData = action.payload.updatedData;
-      state.Posts= state.Posts.map((post) => post.$id === slug ? { ...post, ...updatedData } : post)
+      state.Posts= state.Posts.map((post) => post.$id === slug ? { ...post, ...updatedData} : post)
     }
   }
 })

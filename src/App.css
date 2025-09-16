@@ -4,3 +4,37 @@ body{
   background: #f3f4f6;
 }
 
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+    padding: 5px;
+  }
+
+  .container {
+    width: 95%;
+    padding: 8px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr; /* stack items */
+    gap: 15px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  button {
+    width: 100%;
+    font-size: 14px;
+    padding: 10px;
+  }
+
+  h1, h2, h3 {
+    font-size: 1.2rem;
+    line-height: 1.4;
+  }
+}
+

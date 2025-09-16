@@ -18,6 +18,11 @@ function Signin() {
         setError("");
         try {
             const session = await authentication.login({ ...data })
+            if (session.code === 401) {
+                setError("Email Or Password Is Wrong")
+            }
+            
+            
             if (session) {
                 const CurrentUserData = await authentication.getUser();
                 if (CurrentUserData){
@@ -32,6 +37,8 @@ function Signin() {
                 
             }
         } catch (error) {
+            console.log(error.code);
+            
             setError(error.message)
         }
     }
@@ -39,7 +46,6 @@ function Signin() {
     return (
         <div className="max-h-full max-w-md mx-auto my-20 bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
             <h1 className="text-3xl font-bold text-center text-gray-800 mb-8">Sign In</h1>
-
             <form onSubmit={handleSubmit(login)}>
 
                 <Input

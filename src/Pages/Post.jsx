@@ -11,13 +11,10 @@ function Post() {
     const navigate = useNavigate();
     const dispatch = useDispatch();
 
-    const posts = useSelector((state) => state.post.Posts);
-    const [post, setPost] = useState(null);
+    const post = useSelector((state) =>
+        state.post.Posts.find(p => p.$id === slug)
+    );
 
-    useEffect(() => {
-        const p = posts.find(p => p.$id === slug);
-        setPost(p);
-    }, [posts, slug]); 
 
 
 
